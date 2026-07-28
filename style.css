@@ -11,14 +11,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    background: linear-gradient(135deg,#0d0b1f,#1d1145,#3b1f72);
 }
 
 .calculator{
-    background: #1e293b;
+    background: #171228;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow:
+    0 0 25px rgba(139,92,246,.18),
+    0 15px 40px rgba(0,0,0,.55);
 }
 
 .calculator form input{
@@ -28,16 +31,22 @@
     height: 65px;
     margin: 8px;
     border-radius: 12px;
-    background: #334155;
-    color: white;
+    background: #2b2344;
+    color: #ffffff;
     font-size: 22px;
     cursor: pointer;
     transition: .3s;
+    box-shadow: 0 5px 12px rgba(0,0,0,.35);
 }
 
 .calculator form input:hover{
-    background: #475569;
-    transform: scale(1.05);
+    background: #43336c;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(167,139,250,.4);
+}
+
+.calculator form input:active{
+    transform: scale(.95);
 }
 
 form .display{
@@ -49,30 +58,37 @@ form .display{
 form .display input{
     flex: 1;
     height: 70px;
-    background: #0f172a;
-    color: #00ff88;
+    background: #0f0b1d;
+    color: #ffffff;
     font-size: 35px;
     text-align: right;
     padding-right: 15px;
     border-radius: 12px;
-    box-shadow: none;
+    box-shadow: inset 0 0 12px rgba(139,92,246,.25);
 }
 
+/* Operators */
+
 form input.operator{
-    background: #2563eb;
+    background: linear-gradient(135deg,#ff4fa3,#ff6ec7);
     color: white;
 }
 
 form input.operator:hover{
-    background: #1d4ed8;
+    background: linear-gradient(135deg,#ff2e91,#ff4fa3);
+    box-shadow: 0 0 18px rgba(255,79,163,.55);
 }
+
+/* Equal */
 
 form input.equal{
     width: 146px;
-    background: #10b981;
+    background: linear-gradient(135deg,#00d4ff,#2563eb);
     color: white;
+    box-shadow: 0 0 18px rgba(37,99,235,.45);
 }
 
 form input.equal:hover{
-    background: #059669;
+    background: linear-gradient(135deg,#00bfff,#1d4ed8);
+    box-shadow: 0 0 22px rgba(0,191,255,.6);
 }
